@@ -4,10 +4,10 @@ import jinja2
 import cgi
 
 template.dir = os.path.join(os.path.dirname(__file__), 'templates')
-jinja_env= Jinja2.Environment(loader =jinja.FileSystemLoader(template_dir) autoescape =True
+jinja_env= Jinja2.Environment(loader =jinja.FileSystemLoader(template_dir), autoescape =True)
 
 app= Flask(__name__)
-app.config['DEBUG'] =True
+app.config['DEBUG'] = True
 
 @app.route("/", methods =['GET','POST'])
 def display_form():
